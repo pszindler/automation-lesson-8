@@ -5,7 +5,6 @@ import org.junit.jupiter.params.provider.EnumSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-//    @ExtendWith(SeleniumJupiter.class)
 public class SiteTest extends BaseExtension {
 
     @ParameterizedTest
