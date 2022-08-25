@@ -1,25 +1,27 @@
 package utility;
 
+import org.junit.jupiter.api.TestInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Log {
-    private static final Logger logger = LoggerFactory.getLogger(Log.class);
+    static final Logger logger = LoggerFactory.getLogger(Log.class);
 
-    public static void startTestCase(String testCaseName) {
-        logger.info("test started: " + testCaseName);
+    public static void startTestCase(TestInfo testInfo) {
+        logger.info("test started: " + testInfo.getDisplayName());
     }
 
-    public static void endTestCase(String testCaseName) {
-        logger.info("test ended: " + testCaseName);
+    public static void endTestCase(TestInfo testInfo) {
+        logger.info("test ended: " + testInfo.getDisplayName()
+                + " with tags: " + testInfo.getTags());
     }
 
-    public static void classThreadInfo(Object obj) {
-        logger.info(obj.getClass().getName() + " initialized with thread: " + Thread.currentThread().getName());
+    public static void classThreadDebug(Object obj) {
+        logger.debug(obj.getClass().getName() + " initialized with thread: " + Thread.currentThread().getName());
     }
 
-    public static void seleniumThreadExitInfo() {
-        logger.info("Selenium Web driver successfully closed on thread: " + Thread.currentThread().getName());
+    public static void seleniumThreadExitDebug() {
+        logger.debug("Selenium Web driver successfully closed on thread: " + Thread.currentThread().getName());
     }
 
     public static void info(String message) {

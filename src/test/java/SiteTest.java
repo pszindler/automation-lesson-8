@@ -10,24 +10,21 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class SiteTest extends BaseExtension {
 
     public SiteTest() {
-        Log.classThreadInfo(SiteTest.class);
+        Log.classThreadDebug(SiteTest.class);
     }
-
-
 
     @ParameterizedTest
     @EnumSource(value = Titles.class, names = {"SII"})
     @DisplayName("Check the title of sii.pl")
     @Tag("regression")
     @Tag("booking")
-    void checkTitleForBookingCom(Titles title) {
-        Log.startTestCase("Check the title of sii.pl");
+    void checkTitleForSiiPl(Titles title) {
+        Log.startTestCase(testInfo);
         driver.get("https://sii.pl/");
         Log.info("Driver get sii.pl");
         String actualTitle = driver.getTitle();
-        Log.info("Title found: " + title.getTitle());
         assertThat(actualTitle).isEqualTo(title.getTitle());
-        Log.endTestCase("Check the title of sii.pl");
+        Log.endTestCase(testInfo);
     }
 
     @ParameterizedTest
@@ -36,13 +33,12 @@ public class SiteTest extends BaseExtension {
     @Tag("regression")
     @Tag("onet")
     void checkTitleForOnetPl(Titles title) {
-        Log.startTestCase("Check the title of onet.pl");
+        Log.startTestCase(testInfo);
         driver.get("https://www.onet.pl");
         Log.info("Driver get onet.pl");
         String actualTitle = driver.getTitle();
-        Log.info("Title found: " + title.getTitle());
         assertThat(actualTitle).isEqualTo(title.getTitle());
-        Log.endTestCase("Check the title of onet.pl");
+        Log.endTestCase(testInfo);
     }
 
     @ParameterizedTest
@@ -51,13 +47,12 @@ public class SiteTest extends BaseExtension {
     @Tag("regression")
     @Tag("kotuszkowo")
     void checkTitleForKotuszkowoPl(Titles title) {
-        Log.startTestCase("Check the title of kotuszkowo.pl");
+        Log.startTestCase(testInfo);
         driver.get("http://kotuszkowo.pl/");
         Log.info("Driver.get kotuszkowo.pl");
         String actualTitle = driver.getTitle();
-        Log.info("Title found: " + title.getTitle());
         assertThat(actualTitle).isEqualTo(title.getTitle());
-        Log.endTestCase("Check the title of kotuszkowo.pl");
+        Log.endTestCase(testInfo);
     }
 
     @ParameterizedTest
@@ -66,13 +61,12 @@ public class SiteTest extends BaseExtension {
     @Tag("regression")
     @Tag("filmweb")
     void checkTitleForFilmwebPl(String title) {
-        Log.startTestCase("Check the title of filmweb.pl");
+        Log.startTestCase(testInfo);
         driver.get("https://www.filmweb.pl");
         Log.info("Driver.get filmweb.pl");
         String actualTitle = driver.getTitle();
-        Log.info("Title found: " + title);
         assertThat(actualTitle).isEqualTo(title);
-        Log.endTestCase("Check the title of filmweb.pl");
+        Log.endTestCase(testInfo);
     }
 
     @ParameterizedTest
@@ -81,12 +75,11 @@ public class SiteTest extends BaseExtension {
     @Tag("regression")
     @Tag("selenium")
     void checkTitleForSeleniumDev(Titles title) {
-        Log.startTestCase("Check the title of selenium.dev");
+        Log.startTestCase(testInfo);
         driver.get("https://www.selenium.dev/documentation/en/webdriver/");
         Log.info("Driver.get kotuszkowo.pl");
         String actualTitle = driver.getTitle();
-        Log.info("Title found: " + title);
         assertThat(actualTitle).isEqualTo(title.getTitle());
-        Log.endTestCase("Check the title of selenium.dev");
+        Log.endTestCase(testInfo);
     }
 }

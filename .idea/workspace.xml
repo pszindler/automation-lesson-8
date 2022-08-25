@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a986970-b96c-4732-90c6-43827ec8b9d3" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utility/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/junit-platform.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BaseExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseExtension.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SiteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SiteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/junit-platform.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utility/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utility/Log.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,10 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Development/SzkolenieTesterskie/Day3/project-with-darek&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Development/SzkolenieTesterskie/Day3/project-with-darek&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -63,9 +65,9 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Development\SzkolenieTesterskie\Day3\project-with-darek\src\test" />
       <recent name="C:\Development\SzkolenieTesterskie\Day3\project-with-darek\src\main" />
       <recent name="C:\Development\SzkolenieTesterskie\Day3\project-with-darek\src\test\java" />
-      <recent name="C:\Development\SzkolenieTesterskie\Day3\project-with-darek\src\test" />
       <recent name="C:\Development\SzkolenieTesterskie\Day3\project-with-darek\src\main\resources" />
       <recent name="C:\Development\SzkolenieTesterskie\Day3\project-with-darek\src\test\resources" />
     </key>
@@ -73,7 +75,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.SiteTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="project-with-darek" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SiteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project-with-darek" />
       <option name="PACKAGE_NAME" value="" />
@@ -86,6 +95,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SiteTest" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -126,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661426441301</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="initial commit">
+      <created>1661432507908</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661432507908</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

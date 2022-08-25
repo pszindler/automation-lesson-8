@@ -10,7 +10,7 @@
     <timestamp key="bySecond" datePattern="yyyyMMdd'T'HHmmss"/>
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!--        <file>${DEV_HOME}/mojPlikBezNazwy.log</file>&ndash;&gt;-->
-        <file>${DEV_HOME}/timeBasedlogFile_${bySecond}.log</file>  <!-- z timestamp-->
+        <file>${DEV_HOME}/Selenium_Tests_${bySecond}.log</file>  <!-- z timestamp-->
         <!--        <file>${DEV_HOME}/timeBasedlogFile.log</file>-->
         <!--        <append>true</append>-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">

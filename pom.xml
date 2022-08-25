@@ -16,9 +16,7 @@
         <selenium.version>4.1.2</selenium.version>
         <webdiver.boni.garcia.version>5.1.0</webdiver.boni.garcia.version>
         <jupiter.boni.garcia.version>4.3.0</jupiter.boni.garcia.version>
-        <jupiter.api.version>5.8.2</jupiter.api.version>
-        <jupiter.engine.version>5.8.2</jupiter.engine.version>
-        <jupiter.params.version>5.8.2</jupiter.params.version>
+        <jupiter.version>5.8.2</jupiter.version>
         <assertj.core.version>3.22.0</assertj.core.version>
     </properties>
 
@@ -39,21 +37,21 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>${jupiter.api.version}</version>
+            <version>${jupiter.version}</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>${jupiter.engine.version}</version>
+            <version>${jupiter.version}</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
-            <version>${jupiter.params.version}</version>
+            <version>${jupiter.version}</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
@@ -75,6 +73,11 @@
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback.version}</version>
         </dependency>
     </dependencies>
 

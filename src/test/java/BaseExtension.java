@@ -2,6 +2,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.TestInfo;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -15,11 +16,10 @@ import java.util.logging.Level;
 public class BaseExtension {
 
     protected WebDriver driver;
+    protected TestInfo testInfo;
     ChromeOptions chromeOptions = new ChromeOptions();
-
-
     public BaseExtension() {
-        Log.classThreadInfo(BaseExtension.class);
+        Log.classThreadDebug(BaseExtension.class);
     }
 
     @BeforeAll
@@ -32,15 +32,16 @@ public class BaseExtension {
     }
 
     @BeforeEach
-    void setupDriver() {
+    void init(TestInfo testInfo) {
+        this.testInfo = testInfo;
         Log.info(chromeOptions.getBrowserName() + chromeOptions.getBrowserVersion());
         List<String> chromeArgs = Arrays.asList("--headless", "--disable-gpu",
                 "--window-size=1920,1200", "--ignore-certificate-errors",
                 "--disable-extensions", "--no-sandbox", "--disable-dev-shm-usage");
         chromeOptions.addArguments(chromeArgs);
         driver = new ChromeDriver(chromeOptions);
-        Log.info("Drivers started with chromeOptions");
-        Log.info("ChromeOptions Arguments: " + chromeArgs);
+        Log.info("Driver started with chromeOptions");
+        Log.debug("ChromeOptions Arguments: " + chromeArgs);
     }
 
     @AfterEach
@@ -48,7 +49,7 @@ public class BaseExtension {
         Log.info("Selenium Web driver shutdown attempt...");
         try {
             driver.quit();
-            Log.seleniumThreadExitInfo();
+            Log.seleniumThreadExitDebug();
         } catch (Exception e) {
             Log.warn("Selenium Web driver has not been closed!!! : " + e);
         }
