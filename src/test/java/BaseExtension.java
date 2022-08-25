@@ -13,8 +13,12 @@ import java.util.logging.Level;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class BaseExtension {
 
-    protected WebDriver driver;
+    public WebDriver driver;
     ChromeOptions chromeOptions = new ChromeOptions();
+
+    public BaseExtension() {
+        System.out.println("DRIVER INITIALIZED: thread: " + Thread.currentThread().getName());
+    }
 
     @BeforeAll
     void beforeAll() {

@@ -13,12 +13,12 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <logback.version>1.2.11</logback.version>
-        <selenium.version>4.2.2</selenium.version>
+        <selenium.version>4.1.2</selenium.version>
         <webdiver.boni.garcia.version>5.1.0</webdiver.boni.garcia.version>
         <jupiter.boni.garcia.version>4.3.0</jupiter.boni.garcia.version>
-        <jupiter.api.version>5.7.1</jupiter.api.version>
-        <jupiter.engine.version>5.7.1</jupiter.engine.version>
-        <jupiter.params.version>5.7.1</jupiter.params.version>
+        <jupiter.api.version>5.8.2</jupiter.api.version>
+        <jupiter.engine.version>5.8.2</jupiter.engine.version>
+        <jupiter.params.version>5.8.2</jupiter.params.version>
         <assertj.core.version>3.22.0</assertj.core.version>
     </properties>
 
@@ -86,6 +86,12 @@
                 <version>3.0.0-M3</version>
                 <configuration>
                     <reportFormat>plain</reportFormat>
+                    <properties>
+                        <configurationParameters>
+                            junit.jupiter.execution.parallel.enabled=true
+                            junit.jupiter.execution.parallel.mode.default=concurrent
+                        </configurationParameters>
+                    </properties>
                 </configuration>
             </plugin>
             <plugin>
