@@ -1,37 +1,30 @@
+import org.junit.jupiter.api.TestInstance;
+
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public enum Titles {
-    SII {
-        @Override
-        public String toString() {
-            return "Rozwiązania i usługi IT, inżynierii i BPO - Sii Polska";
-        }
-    },
+    SII, ONET, SELENIUM, FILMWEB, KOTUSZKOWO;
 
-    ONET {
-        @Override
-        public String toString() {
-            return "Onet – Jesteś na bieżąco";
+    public String getTitle() {
+        switch (this) {
+            case SII -> {
+                return "Rozwiązania i usługi IT, inżynierii i BPO - Sii Polska";
+            }
+            case ONET -> {
+                return "Onet – Jesteś na bieżąco";
+            }
+            case FILMWEB -> {
+                return "Filmweb - filmy takie jak Ty!";
+            }
+            case SELENIUM -> {
+                return "WebDriver | Selenium";
+            }
+            case KOTUSZKOWO -> {
+                return "Kotuszkowo- blog o kotach";
+            }
+            default -> {
+                return null;
+            }
         }
-    },
-
-    SELENIUM {
-        @Override
-        public String toString() {
-            return "WebDriver | Selenium";
-        }
-    },
-
-    FILMWEB {
-        @Override
-        public String toString() {
-            return "Filmweb - filmy takie jak Ty!";
-        }
-    },
-    KOTUSZKOWO {
-        @Override
-        public String toString() {
-            return "Kotuszkowo- blog o kotach";
-        }
-    },
+    }
 }
-
 

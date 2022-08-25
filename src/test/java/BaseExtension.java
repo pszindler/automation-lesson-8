@@ -11,13 +11,13 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.logging.Level;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-abstract class BaseExtension {
+public class BaseExtension {
 
-    static protected WebDriver driver;
+    protected WebDriver driver;
     ChromeOptions chromeOptions = new ChromeOptions();
 
     @BeforeAll
-     void beforeAll() {
+    void beforeAll() {
         WebDriverManager.chromedriver().setup();
         java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
@@ -25,10 +25,10 @@ abstract class BaseExtension {
 
     @BeforeEach
     void setupDriver() {
-        chromeOptions.addArguments("--headless", "--disable-gpu",
-                "--window-size=1920,1200", "--ignore-certificate-errors",
-                "--disable-extensions", "--no-sandbox", "--disable-dev-shm-usage");
-        driver = new ChromeDriver(chromeOptions);
+//        chromeOptions.addArguments("--headless", "--disable-gpu",
+//                "--window-size=1920,1200", "--ignore-certificate-errors",
+//                "--disable-extensions", "--no-sandbox", "--disable-dev-shm-usage");
+        driver = new ChromeDriver();
     }
 
     @AfterEach
