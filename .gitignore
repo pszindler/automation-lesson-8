@@ -2,7 +2,7 @@
 # Compiled class file
 *.class
 
-# Log file
+# utility.Log file
 *.log
 
 # BlueJ files
